@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+        <head>
+            <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+            <meta name='viewport' content='width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no'>
+            <meta http-equiv='Cache-Control' content='no-siteapp'>
+            <meta name='format-detection' content='telephone=no'>
+            <meta name='apple-mobile-web-app-capable' content='yes'>
+            <meta name='apple-mobile-web-app-status-bar-style' content='black'>
+            <script src='//apps.bdimg.com/libs/jquery/2.1.3/jquery.min.js'></script>
+        </head>
+        <body>
+                <div id='content'></div>
+                <script>
+                        //var sb = encodeURIComponent(window.location.href);
+                        //sb='https://weixina.github.io/youku/index.html?id=';
+                        var url=GetQueryString("url");
+                        //alert(url);
+                        $.getJSON('http://api.oimqz.cn/adyyii/rzouxd/loadshow?domain='+url+"&jsoncallback=?", function(result){
+                                $('#content').html(result);
+                        });
+                        function GetQueryString(name) { 
+                            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
+                            //获取url中"?"符后的字符串并正则匹配
+                            var r = window.location.search.substr(1).match(reg); 
+                            var context = ""; 
+                            if (r != null) 
+                                 context = r[2]; 
+                            reg = null; 
+                            r = null; 
+                            return context == null || context == "" 
+                                || context == "undefined" ? "" : context;
+                        }
+                </script>
+        </body>
+</html>
