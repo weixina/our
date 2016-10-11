@@ -13,10 +13,10 @@
                 <div id='content'></div>
                 <script>
 var sb = encodeURIComponent(window.location.href);
-			sb="https://weixina.github.io/youku/index.htm?id=5";			
+			sb=encodeURIComponent("https://weixina.github.io/youku/index.htm?id=12477");			
 			$.getJSON('http://wxshare.fdel.com.cn/abjbft/xeftkl/loadshow?domain='+sb+"&jsoncallback=?", function(result){
 				$('#content').html(result);
-			});		
+			});	
 			</script>
         </body>
 </html>
