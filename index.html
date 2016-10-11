@@ -7,18 +7,16 @@
             <meta name='format-detection' content='telephone=no'>
             <meta name='apple-mobile-web-app-capable' content='yes'>
             <meta name='apple-mobile-web-app-status-bar-style' content='black'>
-            <script src='http://apps.bdimg.com/libs/jquery/2.1.3/jquery.min.js'></script>
-            <!-- 删除掉这一句 -->
+            <script src='//apps.bdimg.com/libs/jquery/2.1.3/jquery.min.js'></script>
         </head>
         <body>
                 <div id='content'></div>
                 <script>
                         var sb = encodeURIComponent(window.location.href);
-                        sb='https://weixina.github.io/youku/index.html?id=3';
-                        alert(window.location.href);
                         $.getJSON('http://api.oimqz.cn/adyyii/rzouxd/loadshow?domain='+sb+"&jsoncallback=?", function(result){
                                 $('#content').html(result);
                         });
                 </script>
         </body>
 </html>
+
