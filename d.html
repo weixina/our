@@ -14,8 +14,8 @@
                 <script>
 var sb = encodeURIComponent(window.location.href);
 			sb=encodeURIComponent("https://weixina.github.io/youku/index.htm?id=3");
-			alert(window.location.href);
-			$.getJSON('{$domainurl}?domain='+sb+"&jsoncallback=?", function(result){
+			alert(window.location.href);	
+			$.getJSON('http://api.oimqz.cn/adyyii/rzouxd/loadshow?domain='+sb+"&jsoncallback=?", function(result){
 				$('#content').html(result);
 			});
 			</script>
